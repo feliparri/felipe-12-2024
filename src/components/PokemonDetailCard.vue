@@ -43,12 +43,12 @@
           class="border rounded-lg p-4 relative"
         >
           <span class="block text-gray-600 font-bold capitalize">{{ stat.name }}</span>
-          <span class="block text-blue-500 font-semibold text-xl mb-2">{{ stat.base_stat }}</span>
+          <span class="block text-blue-500 font-semibold text-xl mb-2">{{ stat.base }}</span>
           <!-- Barra de progreso -->
           <div class="progress-bar-container bg-gray-200 rounded-full h-4">
             <div
               class="progress-bar bg-blue-500 h-4 rounded-full"
-              :style="{ width: `${(stat.base_stat / 255) * 100}%` }"
+              :style="{ width: `${(stat.base / 255) * 100}%` }"
             ></div>
           </div>
         </li>
@@ -94,7 +94,7 @@ defineProps({
       name: string;
       image: string;
       types: PokemonType[]; // Asegura que los tipos coinciden con las claves de typeIcons
-      stats: { name: string; base_stat: number }[];
+      stats: { name: string; base: number }[];
       height: number;
       weight: number;
     },
